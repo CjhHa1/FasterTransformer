@@ -231,4 +231,11 @@ template void invokeTransposeMultiHeadToSingle(__nv_bfloat16* dst,
                                                cudaStream_t   stream);
 #endif
 
+template<typename T>
+void invokeAdd(const T* input, const T* bias, T* output){
+*output = *input + *bias ;
+}
+
+template void invokeAdd(const float* input, const float* bias, float* output);
+
 }  // namespace fastertransformer

@@ -35,4 +35,10 @@ void invokeTransposeMultiHeadToSingle(T*           dst,
                                       const int    head_num,
                                       const int    size_per_head,
                                       cudaStream_t stream);
+
+template<typename T>
+void invokeAdd(const T* input,
+               const T* bias,
+               T*       output);
+
 }  // namespace fastertransformer

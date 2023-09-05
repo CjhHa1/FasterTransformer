@@ -15,3 +15,7 @@
 add_library(th_decoder STATIC DecoderOp.cc)
 set_property(TARGET th_decoder PROPERTY POSITION_INDEPENDENT_CODE  ON)
 target_link_libraries(th_decoder PRIVATE "${TORCH_LIBRARIES}" Decoder th_utils)
+
+add_library(th_add STATIC AddOp.cc)
+set_property(TARGET th_add PROPERTY POSITION_INDEPENDENT_CODE  ON)
+target_link_libraries(th_add PRIVATE "${TORCH_LIBRARIES}" Add th_utils)
