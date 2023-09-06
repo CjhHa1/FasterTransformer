@@ -18,4 +18,4 @@ target_link_libraries(th_decoder PRIVATE "${TORCH_LIBRARIES}" Decoder th_utils)
 
 add_library(th_add STATIC AddOp.cc)
 set_property(TARGET th_add PROPERTY POSITION_INDEPENDENT_CODE  ON)
-target_link_libraries(th_add PRIVATE "${TORCH_LIBRARIES}" Add th_utils)
+target_link_libraries(th_add PRIVATE "${TORCH_LIBRARIES}" add_bias_transpose_kernels th_utils)
